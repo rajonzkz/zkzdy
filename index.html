@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -12,6 +13,23 @@
         body {
             background-color: rgb(238, 238, 238);
         }
+
+        body {
+            width:100%;
+            height: 100%;
+            /* 加载背景图 */
+            background-image: url("images/top-bg.jpg");
+            /* background: url("../static/images/index/backImg.jpg") no-repeat; */
+            /* 背景图垂直、水平均居中 */
+            background-position: center center;
+            /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+            background-attachment: fixed;
+            /* 让背景图基于容器大小伸缩 */
+            background-size: cover;
+            /* 设置背景颜色，背景图加载过程中会显示背景色 */
+            /* background-color: rgba(41, 50, 39, 1); */
+        }
+
 
         /*导航*/
         .menu:after {
@@ -27,12 +45,15 @@
             font-weight: 800;
             width: 100%;
             margin: auto;
-            height: 70px;
+            /* height: 70px; */
             position: fixed;
+
         }
+
         .menu ul {
             list-style: none;
         }
+
         .menuleft {
             float: left;
             margin-left: 20%;
@@ -40,14 +61,16 @@
             font-size: 35px;
             margin-top: 13px;
         }
-        .menuright{
+
+        .menuright {
             float: right;
             /*border: 1px solid pink;*/
             /*margin-right: 400px;*/
-            margin-right:18%;
+            margin-right: 18%;
             width: 600px;
-            margin-top:30px;
+            margin-top: 30px;
         }
+
         .menuright ul li {
             float: left;
             font-size: 15px;
@@ -55,22 +78,24 @@
             cursor: pointer;
             width: 80px;
             /*height: 30px;*/
-            margin-right:  20px ;
+            margin-right: 20px;
             text-align: center;
 
 
 
         }
+
         .menuright ul li:hover {
             background-color: rgb(240, 191, 0);
         }
+
         /*banner*/
         .banner {
             background-attachment: fixed;
             background-position: 25% 25%;
-            width: 100%;
-            background-image: url("images/top-bg.jpg");
-            height: 900px;
+            /* width: 100%; */
+            /* background-image: url("images/top-bg.jpg"); */
+            /* height: 900px; */
             /*border:1px solid red;*/
             /*text-align: center;*/
             margin: auto;
@@ -137,6 +162,7 @@
             padding-left: 50px;
             margin-top: 10px;
         }
+
         /*sec1*/
         .sec1 {
             height: 406px;
@@ -197,7 +223,8 @@
             font-weight: bold;
         }
 
-        .sec2bodydiv h1, .sec2bodydiv p {
+        .sec2bodydiv h1,
+        .sec2bodydiv p {
             padding-top: 20px;
         }
 
@@ -262,7 +289,7 @@
         }
 
         .sec4bodytext {
-            border:1px solid yellow;
+            border: 1px solid yellow;
             width: 1000px;
             margin: 236px;
         }
@@ -301,7 +328,8 @@
             background-color: white;
         }
 
-        .sec5body h1, .sec5body p {
+        .sec5body h1,
+        .sec5body p {
             margin: 20px 20px;
         }
 
@@ -408,7 +436,8 @@
             padding: 60px;
             font-size: 30px;
         }
-        .sec6shurukuang{
+
+        .sec6shurukuang {
             /*border: 1px solid blue;*/
             width: 980px;
             margin: 0 auto;
@@ -419,6 +448,7 @@
             width: 1000px;
             margin: 0 auto;
         }
+
         .sec6 input {
             width: 440px;
             height: 35px;
@@ -433,9 +463,11 @@
             border: none;
 
         }
+
         .textarea {
             text-align: center;
         }
+
         .sec6input:after {
             content: "";
             display: block;
@@ -475,15 +507,16 @@
 
 
 </head>
+
 <body>
-<!--banner-->
-<section class="banner">
-    <div class="caption">
-        <h1><span style="color: yellow">Hellow! </span> Dy</h1>
-        <h3>哈哈怪！！！</h3>
-    </div>
-</section>
-<!-- <section class="sec1">
+    <!--banner-->
+    <section class="banner">
+        <div class="caption">
+            <h1><span style="color: yellow">Hellow! </span> Dy</h1>
+            <h3>哈哈怪！！！</h3>
+        </div>
+    </section>
+    <!-- <section class="sec1">
     <div>
         <h1>We work to make web a beautiful place.</h1>
         <h1>We craft beautiful designs and convert them into
@@ -491,8 +524,8 @@
         </h1>
     </div>
 </section> -->
-<!-- <hr style="background-color: white;height: 1px;border:none;margin:20px 0"> -->
-<!-- <section class="sec2">
+    <!-- <hr style="background-color: white;height: 1px;border:none;margin:20px 0"> -->
+    <!-- <section class="sec2">
     <div class="sec2head">
         <img src="logo/device_computer.png" width="85" alt="">
         <h1>Portfolio...</h1>
@@ -557,7 +590,7 @@
         </div>
     </div>
 </section> -->
-<!-- <section class="sec5">
+    <!-- <section class="sec5">
     <div class="sec5head">
         <img src="logo/record.png" width="100" alt="">
         <h1>Our Blog</h1>
@@ -599,6 +632,7 @@
     </div>
 
 
-</section> --> 
+</section> -->
 </body>
+
 </html>
