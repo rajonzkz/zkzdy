@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(238, 238, 238);
+        }
+
+        /*导航*/
+        .menu:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .menu {
+            border-bottom: 2px solid yellow;
+            color: white;
+            background-color: rgb(16, 46, 56);
+            font-weight: 800;
+            width: 100%;
+            margin: auto;
+            height: 70px;
+            position: fixed;
+        }
+        .menu ul {
+            list-style: none;
+        }
+        .menuleft {
+            float: left;
+            margin-left: 20%;
+            /*border: 1px solid black;*/
+            font-size: 35px;
+            margin-top: 13px;
+        }
+        .menuright{
+            float: right;
+            /*border: 1px solid pink;*/
+            /*margin-right: 400px;*/
+            margin-right:18%;
+            width: 600px;
+            margin-top:30px;
+        }
+        .menuright ul li {
+            float: left;
+            font-size: 15px;
+            /*border: 1px solid yellow;*/
+            cursor: pointer;
+            width: 80px;
+            /*height: 30px;*/
+            margin-right:  20px ;
+            text-align: center;
+
+
+
+        }
+        .menuright ul li:hover {
+            background-color: rgb(240, 191, 0);
+        }
+        /*banner*/
+        .banner {
+            background-attachment: fixed;
+            background-position: 25% 25%;
+            width: 100%;
+            background-image: url("images/top-bg.jpg");
+            height: 900px;
+            /*border:1px solid red;*/
+            /*text-align: center;*/
+            margin: auto;
+        }
+
+        .caption {
+            text-align: center;
+            color: white;
+            padding: 150px;
+            /*border:1px solid yellow;*/
+        }
+
+        .caption h1 {
+            font-size: 50px;
+            /*border:1px solid black;*/
+            margin-top: 40px;
+        }
+
+        .caption h3 {
+            padding-top: 50px;
+            /*border:1px solid yellow;*/
+            font-size: 30px;
+        }
+
+        .caption button {
+            width: 200px;
+            height: 50px;
+            background-color: rgb(273, 183, 36);
+            color: white;
+            font-size: 25px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .caption button:hover {
+            background-color: rgb(67, 65, 62);
+        }
+
+        .caption input {
+            width: 600px;
+            height: 45px;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+
+        .captionfind {
+            /*border:1px solid yellow;*/
+            padding: 20px;
+        }
+
+        .logoside {
+            text-align: center;
+            /*border:1px solid blue;*/
+            margin-top: 50px;
+        }
+
+        .logo {
+            width: 60px;
+            padding-left: 50px;
+            margin-top: 10px;
+        }
+        /*sec1*/
+        .sec1 {
+            height: 406px;
+            background-color: rgb(255, 188, 0);
+            /*text-align: center;*/
+            overflow: hidden;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .sec1 div {
+            color: white;
+            /*border:1px solid blue;*/
+            font-size: 25px;
+            width: 1000px;
+            text-align: center;
+            margin: 120px auto;
+        }
+
+        /*sec2*/
+        .sec2 {
+            width: 1170px;
+            margin: auto;
+            /*border: 1px solid red;*/
+            padding-bottom: 100px;
+        }
+
+        .sec2head {
+            text-align: center;
+            padding-top: 50px;
+            /*border:1px solid blue;*/
+            color: rgb(49, 46, 30);
+            font-size: 30px;
+        }
+
+        /*.sec2body{*/
+        /*width: 1170px;*/
+        /*border:1px solid yellow;*/
+        /*}*/
+        .sec2body:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .sec2bodydiv {
+            width: 370px;
+            /*text-align: center;*/
+            /*border:1px solid black;*/
+            float: left;
+            padding: 9px;
+            line-height: 30px;
+        }
+
+        .sec2bodydiv a {
+            text-decoration: none;
+            color: rgb(237, 183, 36);
+            font-weight: bold;
+        }
+
+        .sec2bodydiv h1, .sec2bodydiv p {
+            padding-top: 20px;
+        }
+
+        /*sec3*/
+        .sec3 {
+            width: 1170px;
+            margin: auto;
+            /*border: 1px solid red;*/
+            text-align: center;
+            font-size: 30px;
+            padding-top: 50px;
+            padding-bottom: 80px;
+        }
+
+        .sec3:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .sec3body1 {
+            width: 270px;
+            /*border: 1px solid yellow;*/
+            background-color: rgb(230, 230, 230);
+            float: left;
+            margin-left: 16px;
+            margin-top: 40px;
+            margin-bottom: 80px;
+
+        }
+
+        .sec3body1 img {
+            margin-top: 40px;
+            height: 57px;
+
+        }
+
+        .sec3body1 h1 {
+            font-size: 22px;
+        }
+
+        .sec3body1 p {
+            font-size: 1px;
+            line-height: 1.5;
+            margin: 20px;
+        }
+
+        /*sec4*/
+        .sec4 {
+            height: 647px;
+            background-color: rgb(255, 188, 0);
+            width: 100%;
+            /*font-size: 45px;;*/
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .sec4body {
+            width: 1662px;
+            /*border:1px solid red;*/
+            margin: 0 auto;
+        }
+
+        .sec4bodytext {
+            border:1px solid yellow;
+            width: 1000px;
+            margin: 236px;
+        }
+
+        .sec4 p {
+            font-size: 50px;
+            line-height: 60px;
+            font-weight: bold;
+        }
+
+        /*sec5*/
+        .sec5 {
+            /*text-align: center;*/
+            width: 1170px;
+            /*border: 1px solid red;*/
+            margin: 0 auto;
+            /*background-color: rgb(238,238,238);*/
+            margin-top: 50px;
+        }
+
+        .sec5:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .sec5head {
+            text-align: center;
+        }
+
+        .sec5body {
+            width: 370px;
+            /*border: 1px solid yellow;*/
+            float: left;
+            margin: 9px;
+            background-color: white;
+        }
+
+        .sec5body h1, .sec5body p {
+            margin: 20px 20px;
+        }
+
+        .sec5body h1 {
+            font-size: 20px;
+        }
+
+        .sec5bodya {
+            margin: 20px 20px;
+        }
+
+        .sec5body a {
+            text-decoration: none;
+            color: rgb(237, 183, 36);
+            font-weight: bold;
+
+        }
+
+        .sec5button {
+            text-align: center;
+        }
+
+        .sec5 button {
+            background-color: rgb(237, 183, 36);
+            color: white;
+            width: 210px;
+            height: 60px;
+            font-size: 25px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            margin: 80px auto;
+        }
+
+        .sec5 button:hover {
+            background-color: rgb(44, 38, 29)
+        }
+
+        /*sec6*/
+        .sec6 {
+            background-color: rgb(44, 38, 29);
+            /*text-align: center;*/
+            /*width: 1170px;*/
+            margin: 0 auto;
+            color: white;
+            /*border: 1px solid red;*/
+        }
+
+        .sec6head {
+            text-align: center;
+            padding: 50px;
+            font-size: 30px;
+        }
+
+        .sec6body1 {
+            /*border: 1px solid red;*/
+            width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .sec6body1:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .sec6body {
+            float: left;
+            margin-left: 40px;
+            /*border: 1px solid red;*/
+            margin-top: 30px;
+        }
+
+        .sec6body img {
+            border-radius: 500px;
+        }
+
+        .sec6text {
+            text-align: center;
+            /*line-height: 60px;*/
+            width: 1000px;
+            /*border: 1px solid yellow;*/
+            margin: 0 auto;
+        }
+
+        .sec6text h1 {
+            margin-top: 60px;
+
+        }
+
+        .sec6text p {
+            font-size: 20px;
+            margin-top: 30px;
+        }
+
+        .sce6message {
+            /*border: 1px solid yellow;*/
+        }
+
+        .sce6messagehead {
+            text-align: center;
+            padding: 60px;
+            font-size: 30px;
+        }
+        .sec6shurukuang{
+            /*border: 1px solid blue;*/
+            width: 980px;
+            margin: 0 auto;
+        }
+
+        .sec6input {
+            /*border: 1px solid blue;*/
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .sec6 input {
+            width: 440px;
+            height: 35px;
+            font-size: 20px;
+            border-radius: 4px;
+            outline: none;
+            /*border: 1px solid yellow;*/
+            background-color: rgb(223, 228, 224);
+            float: left;
+            margin-left: 30px;
+            margin-bottom: 20px;
+            border: none;
+
+        }
+        .textarea {
+            text-align: center;
+        }
+        .sec6input:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .sec6 button {
+            /*border: 1px solid blue;*/
+            margin: 20px;
+        }
+
+        .sec6button {
+            background-color: rgb(237, 183, 36);
+            color: white;
+            width: 185px;
+            height: 60px;
+            font-size: 20px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .sec6button:hover {
+            background-color: rgb(60, 59, 56)
+        }
+
+        footer {
+            height: 40px;
+
+        }
+
+        footer p {
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+<body>
+<!--banner-->
+<section class="banner">
+    <div class="caption">
+        <h1><span style="color: yellow">Hellow! </span> Dy</h1>
+        <h3>哈哈怪！！！</h3>
+    </div>
+</section>
+<!-- <section class="sec1">
+    <div>
+        <h1>We work to make web a beautiful place.</h1>
+        <h1>We craft beautiful designs and convert them into
+            fully functional and user-friendy web app.
+        </h1>
+    </div>
+</section> -->
+<!-- <hr style="background-color: white;height: 1px;border:none;margin:20px 0"> -->
+<!-- <section class="sec2">
+    <div class="sec2head">
+        <img src="logo/device_computer.png" width="85" alt="">
+        <h1>Portfolio...</h1>
+    </div>
+    <div class="sec2body">
+        <div class="sec2bodydiv">
+            <img src="images/sec2-1.jpg" width="370" alt="">
+            <h1>Ethan Marcotte Design</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.</p>
+            <a href="#">VIEW PROJECT</a>
+        </div>
+        <div class="sec2bodydiv">
+            <img src="images/sec2-2.jpg" width="370" alt="">
+            <h1>A Book Apart</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.</p>
+            <a href="#">VIEW PROJECT</a>
+        </div>
+        <div class="sec2bodydiv">
+            <img src="images/sec2-3.jpg" width="370" alt="">
+            <h1>Four Rules For Designers</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.</p>
+            <a href="#">VIEW PROJECT</a>
+        </div>
+        <div class="sec2bodydiv">
+            <img src="images/sec2-3.jpg" width="370" alt="">
+            <h1>Ethan Marcotte Design</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.</p>
+            <a href="#">VIEW PROJECT</a>
+        </div>
+        <div class="sec2bodydiv">
+            <img src="images/sec2-2.jpg" width="370" alt="">
+            <h1>A Book Apart</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.</p>
+            <a href="#">VIEW PROJECT</a>
+        </div>
+        <div class="sec2bodydiv">
+            <img src="images/sec2-1.jpg" width="370" alt="">
+            <h1>Four Rules For Designers</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.</p>
+            <a href="#">VIEW PROJECT</a>
+        </div>
+    </div>
+</section>
+<hr style="background-color: white;height: 1px;border:none;margin:20px 0">
+<section class="sec4">
+    <div class="sec4body">
+        <div class="sec4bodytext">
+            <h3>John Doe & Sons:</h3>
+            <p>"We highly appreciate the enthusiasm and creative talent of the people at Legend!"</p>
+        </div>
+    </div>
+</section> -->
+<!-- <section class="sec5">
+    <div class="sec5head">
+        <img src="logo/record.png" width="100" alt="">
+        <h1>Our Blog</h1>
+    </div>
+    <div class="sec5body">
+        <img src="images/sec5-1.jpg" width="370" alt="">
+        <p>March 17, 2013</p>
+        <h1>A girl running on a road</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s. …</p>
+        <div class="sec5bodya">
+            <a href="#">READ MORE</a>
+        </div>
+
+    </div>
+    <div class="sec5body">
+        <img src="images/sec5-2.jpg" width="370" alt="">
+        <p>February 28, 2013</p>
+        <h1>A bear sleeping on a tree</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s. …</p>
+
+        <div class="sec5bodya">
+            <a href="#">READ MORE</a>
+        </div>
+    </div>
+    <div class="sec5body">
+        <img src="images/sec5-3.jpg" width="370" alt="">
+        <p>February 06, 2013</p>
+        <h1>A Panda playing with his baby</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s. …</p>
+        <div class="sec5bodya">
+            <a href="#">READ MORE</a>
+        </div>
+    </div>
+    <div class="sec5button">
+        <button>Go to our blog</button>
+    </div>
+
+
+</section> --> 
+</body>
+</html>
